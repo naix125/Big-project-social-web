@@ -1,0 +1,66 @@
+.message {
+    
+    display: grid;
+    padding: 2px;
+    margin: 2px;
+    height: 71px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 15px;
+    background-color: beige;
+   
+    
+
+}
+.message a{
+    text-decoration: none;
+}
+
+.messageblock {
+display: grid;
+
+    grid-template-areas: 
+    "a ut"
+    "a d";
+    grid-template-columns: 50px auto;
+
+}
+.avatar {
+    display: grid;
+    
+    grid-area: a;
+    height: 50px;
+    width: 50px;
+    border-radius:50% ;
+}
+.usernametime {
+
+    display: grid;
+
+    
+   grid-area: ut;
+   grid-template-areas: 
+   
+   'u t';
+   grid-template-columns: auto auto;
+   height: 25px;
+   
+}
+.time {
+    
+    justify-self: end;
+    right: 0;
+    display: grid;
+    grid-area: t;
+    
+    
+}
+.username {
+    display: grid;
+    padding-left: 11px;
+grid-area: u;
+}
+.dialog {
+    padding-left: 11px;
+    grid-area: d;
+}
