@@ -1,3 +1,4 @@
+import { rerenderEntireTree } from "../render";
 
 
 let state  = {
@@ -21,5 +22,7 @@ export let addUser =(userName) => {
     id: '3'
   }  
   state.dialogsData.push(newUser);
+  rerenderEntireTree (state);
 }
+
   export default state;

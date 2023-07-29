@@ -11,7 +11,9 @@ const Messenger =(props)=> {
     let addUser = () => {
         debugger
         let text = newUserName.current.value;
+
        props.addUser(text)
+       newUserName.current.value = '';
     }
    
     let dialogsElements = props.dialogsData.map ( d => <Message username={d.username} 
