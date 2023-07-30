@@ -13,7 +13,9 @@ const App =(props)=> {
   
 <Header/>
 <Navbar/>
-<Content dialogsData={props.dialogsData} addUser={props.addUser}/>
+<Content dialogsData={props.dialogsData} addUser={props.addUser} 
+newUserText={props.newUserText}
+updateNewUser={props.updateNewUser}/>
 
 
 

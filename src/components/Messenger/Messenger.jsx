@@ -9,15 +9,22 @@ const Messenger =(props)=> {
 
 
     let addUser = () => {
-        debugger
+        
+
         let text = newUserName.current.value;
 
        props.addUser(text)
-       newUserName.current.value = '';
+      
     }
    
     let dialogsElements = props.dialogsData.map ( d => <Message username={d.username} 
         dialog={d.dialog} time={d.time} id={d.id}/> );
+
+        let onUserChange = () =>{
+            let text =newUserName.current.value;
+            props.updateNewUser(text);
+
+        }
     return (
         
         <div className={s.messenger}>
@@ -25,7 +32,8 @@ const Messenger =(props)=> {
                 {dialogsElements}
 
                 <div>
-<textarea ref={newUserName}></textarea>
+<textarea onChange={onUserChange} ref={newUserName} 
+value={props.newUserText}/>
 <button onClick={addUser}>
     adduser
 </button>

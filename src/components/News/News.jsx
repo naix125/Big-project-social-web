@@ -1,6 +1,6 @@
 import React from "react";
 import s from './News.module.css'
-debugger;
+
 const News =()=>{
     let newPostElement = React.createRef();
 

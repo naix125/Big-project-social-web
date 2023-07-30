@@ -12,9 +12,11 @@ dialogsData: [
     {username:'Valeria Tereshenko',dialog:'wazzup', time:'12.15' ,id:'1'}
     
   ]
+,
+ newUserText: "it-camasutra"
 }
 export let addUser =(userName) => {
-  debugger
+
   let newUser = {
     username: userName,
     dialog:'new dialog',
@@ -22,6 +24,12 @@ export let addUser =(userName) => {
     id: '3'
   }  
   state.dialogsData.push(newUser);
+  rerenderEntireTree (state);
+}
+export let updateNewUser =(newUserName) => {
+  
+  
+  state.newUserText = newUserName;
   rerenderEntireTree (state);
 }
 
