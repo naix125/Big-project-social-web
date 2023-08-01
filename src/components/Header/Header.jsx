@@ -1,12 +1,12 @@
 import React from "react";
-// import s from './Header.module.css';
-import './Header.css'; 
+import s from './Header.module.css';
+import VK from '../../images/VK.svg'
+
 const Header =()=>{
     return (<header className="header">
-      <div className="logo">
-        <img src="icon.png" alt="logo" className="logo-image" />
+      <div className={s.logo}>
+        <img src={VK} alt="logo" className={s.logoImage} />
       </div>
-      
       <div className="search">
           <input type="text" className="search-input" />
         </div>

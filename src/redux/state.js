@@ -15,6 +15,10 @@ dialogsData: [
 ,
  newUserText: "it-camasutra"
 }
+let zatichka =() =>{
+  console.log ('zatichka')
+}
+
 export let addUser =(userName) => {
 
   let newUser = {
@@ -25,12 +29,18 @@ export let addUser =(userName) => {
   }  
   state.dialogsData.push(newUser);
   rerenderEntireTree (state);
+  zatichka ();
 }
 export let updateNewUser =(newUserName) => {
   
   
   state.newUserText = newUserName;
   rerenderEntireTree (state);
+}
+
+export const provodnik = (observer) => {
+  zatichka=observer
+
 }
 
   export default state;
