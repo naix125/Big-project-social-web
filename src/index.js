@@ -1,27 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import state, { provodnik } from './redux/state';
+import store from './redux/state';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { addUser, updateNewUser } from './redux/state';
 const consl = () => {
     console.log ('to chto nujno vivesti')
 }
 
+;
 
 
 
-
-const rerenderEntireTree =(state) => {
+const rerenderEntireTree =(store.getState()) => {
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App dialogsData={state.dialogsData} newUserText={state.newUserText} addUser={addUser} updateNewUser={updateNewUser}/>
+    <App dialogsData={store.dialogsData} newUserText={store.newUserText} addUser={addUser} updateNewUser={updateNewUser}/>
   </React.StrictMode>
 );
 }
@@ -29,7 +28,7 @@ root.render(
 reportWebVitals();
 provodnik (rerenderEntireTree);
 
-rerenderEntireTree (state);
+rerenderEntireTree (store._state);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
