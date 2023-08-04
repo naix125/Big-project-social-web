@@ -13,22 +13,22 @@ const consl = () => {
 
 
 
-const rerenderEntireTree =(store.getState()) => {
+let rerenderEntireTree = (state) => {
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App dialogsData={store.dialogsData} newUserText={store.newUserText} addUser={addUser} updateNewUser={updateNewUser}/>
+    <App dialogsData={store.dialogsData} newUserText={store.newUserText} addUser={store.addUser} updateNewUser={store.updateNewUser}/>
   </React.StrictMode>
-);
+)
 }
 
 reportWebVitals();
-provodnik (rerenderEntireTree);
+store.provodnik (rerenderEntireTree);
 
-rerenderEntireTree (store._state);
+rerenderEntireTree (store.getState());
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

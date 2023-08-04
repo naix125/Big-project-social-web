@@ -19,27 +19,27 @@ let store = {
     newUserText: "it-camasutra",
     addUser (userName) {
 
-       newUser = {
+       this.newUser = {
         username: userName,
         dialog:'new dialog',
         time :'new time',
         id: '3'
       }  
-      state.dialogsData.push(newUser);
-      rerenderEntireTree (state);
+      this._state.dialogsData.push(this.newUser);
+      this.rerenderEntireTree (this._state);
       
     },
     rerenderEntireTree () {
-      console.log ('zatichka')
+      console.log ('zatichka');
     },
     updateNewUser (newUserName)  {
   
   
-      state.newUserText = newUserName;
-      rerenderEntireTree (state);
+      this._state.newUserText = newUserName;
+      this.rerenderEntireTree (this._state);
     },
     provodnik (observer) {
-      rerenderEntireTree=observer
+      this.rerenderEntireTree=observer
     
 }
 
