@@ -14,6 +14,7 @@ const Content =(props)=>{
     <Route path="/myprofile" element={<MyProfile />} />
 
     <Route path="/news" element ={<News/>} />
+    
     <Route path="/messenger/" element = {<Messenger dialogsData={props.dialogsData} 
     addUser={props.addUser}
     newUserText={props.newUserText}
