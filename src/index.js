@@ -20,8 +20,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App 
-    dialogsData={store._state.dialogsData} 
-    newUserText={store.newUserText} 
+    dialogsData={store.getState().dialogsData} 
+    newUserText={store._state.newUserText} 
     addUser={store.addUser} 
     updateNewUser={store.updateNewUser}/>
   </React.StrictMode>
@@ -31,7 +31,7 @@ root.render(
 reportWebVitals();
 
 
-rerenderEntireTree (store._state);
+rerenderEntireTree (store.getState());
 store.provodnik (rerenderEntireTree);
 
 // If you want to start measuring performance in your app, pass a function

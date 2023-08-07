@@ -10,30 +10,30 @@ let store = {
         {username:'Valeria Tereshenko',dialog:'wazzup', time:'22.15' ,id:'1'},
         {username:'Valeria Tereshenko',dialog:'wazzup', time:'12.15' ,id:'1'}
         
-      ]
+      ],
     
    
     
 
     
 
-
+      newUserText: "it-camasutra",
  
   },
   getState () {
-    return this._state
+    return store._state;
   },
-  newUserText: "it-camasutra",
+ 
     addUser (userName) {
 
-       this.newUser = {
-        username: userName,
+       let newUser = {
+        username: store._state.dialogsData.userName,
         dialog:'new dialog',
         time :'new time',
         id: '3'
       }  
-      this._state.dialogsData.push(this.newUser);
-      this.rerenderEntireTree (this._state);
+      store._state.dialogsData.push(newUser);
+      store.rerenderEntireTree (store._state);
       
     },
     rerenderEntireTree () {
@@ -42,12 +42,12 @@ let store = {
     updateNewUser (newUserName)  {
   
   
-      this.newUserText = newUserName;
-      this.rerenderEntireTree (this._state);
+      store._state.newUserText = newUserName;
+      store.rerenderEntireTree (store._state);
     },
 
     provodnik (observer) {
-      this.rerenderEntireTree=observer
+      store.rerenderEntireTree=observer
     
 }
 }
