@@ -1,6 +1,7 @@
 import React from "react";
 import s from './Header.module.css';
 import VK from '../../images/VK.svg'
+import bell from '../../images/bell.svg'
 
 const Header =()=>{
     return (<header className="header">
@@ -11,7 +12,7 @@ const Header =()=>{
           <input type="text" className="search-input" />
         </div>
         <div className="icons">
-          <img src="bell.png" alt="bell" className="notification-icon" />
+        <img src={bell} alt="bell" className="notification-icon" />
           <img src="music.png" alt="music" className="music-icon" />
         </div>
         <div className="profiles">
