@@ -8,7 +8,7 @@ let store = {
         {username:'Kuznecov Pavel',dialog:'Bye', time:'1:45' ,id:'1'},
         {username:'Bukia GeiOrgii',dialog:'Go finish react', time:'22.15',id:'1' },
         {username:'Valeria Tereshenko',dialog:'wazzup', time:'22.15' ,id:'1'},
-        {username:'Valeria Tereshenko',dialog:'wazzup', time:'12.15' ,id:'1'}
+        {username:'Valeria Tereso',dialog:'wazzup', time:'12.15' ,id:'1'}
         
       ],
     
