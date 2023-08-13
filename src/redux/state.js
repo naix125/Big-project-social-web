@@ -33,9 +33,7 @@ let store = {
         id: '3'
       }  
       store._state.dialogsData.push(newUser);
-      store._state.newUserText= ("")
       store.rerenderEntireTree (store._state);
-      
       
     },
     rerenderEntireTree () {
