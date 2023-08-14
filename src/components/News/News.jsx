@@ -16,6 +16,7 @@ const News =()=>{
        </div>
        <button onClick={ newPost }>
 New post
+new post
 
        </button>
        <div>
