@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import Navbar from './components/Navbar/Navbar';
-import Content from './components/Content/Content';
-import { BrowserRouter } from 'react-router-dom';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Navbar from './components/navbar/navbar';
+import Messenger from './components/messenger/messenger';
+
+import Musicbar from './components/musicbar/musicbar';
 
 const App =(props)=> {
  
@@ -11,17 +13,14 @@ const App =(props)=> {
   <BrowserRouter>
   <div className='App'>
   
-<Header/>
-<Navbar/>
-<Content dialogsData={props.dialogsData} addUser={props.addUser} 
-newUserText={props.newUserText}
-updateNewUser={props.updateNewUser}/>
-
-
-
-</div>
-
+   <Navbar/>
+   <Routes>
+ <Route path='/messenger' element ={ < Messenger />}  />
+ <Route path='/musicbar'element={<Musicbar/>} />
+ </Routes>
+ </div>
 </BrowserRouter>
+
   )
 }
 

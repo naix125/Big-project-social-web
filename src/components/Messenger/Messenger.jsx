@@ -1,52 +1,26 @@
 import React from "react";
-import s from './Messenger.module.css'
-import Message from "../Message/Message";
-
-
-
-const Messenger =(props)=> {
-    let newUserName = React.createRef();
-
-
-    let addUser = () => {
-        
-
-        let text = newUserName.current.value;
-
-       props.addUser(text)
-      
-    }
-   
-    let dialogsElements = props.dialogsData.map ( d => <Message username={d.username} 
-        dialog={d.dialog} time={d.time} id={d.id}/> );
-
-        let onUserChange = () =>{
-            let text =newUserName.current.value;
-            props.updateNewUser(text);
-
-        }
+import Message from "../message/message";
+let Messenger = () => {
+    let dialogData =[
+        {username:'sex',dialog: 'lets fuck',time :'11.45'},
+        {username:'sex',dialog: 'lets fuck',time :'11.45'},
+        {username:'sex',dialog: 'lets fuck',time :'11.45'},
+        {username:'sex',dialog: 'lets fuck',time :'11.45'},
+        {username:'sex',dialog: 'lets fuck',time :'11.45'},
+        {username:'sex',dialog: 'lets fuck',time :'11.45'},
+        {username:'sex',dialog: 'lets fuck',time :'11.45'}
+    ]
+    let dialogElements =dialogData.map (
+        d=> <Message username={d.username}
+        dialog={d.dialog}
+        time={d.time}/>
+    )
     return (
-        
-        <div className={s.messenger}>
-            <div>
-                {dialogsElements}
-
-                <div>
-<textarea onChange={onUserChange} ref={newUserName} 
-value={props.newUserText}/>
-<button onClick={addUser}>
-    adduser
-</button>
-
-                        </div>
-                        </div>
-
-                        
-            <div>
-                navbarmessenger
-            </div>
-            
+        <div>
+            {dialogElements}
         </div>
+
+
     )
 }
-export default Messenger;
+export default Messenger
