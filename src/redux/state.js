@@ -1,4 +1,13 @@
-
+export let newsState = {
+  postsData: [
+    {username:'marina', post: 'hello', time :'11.25' },
+    {username:'marina', post: 'hello', time :'11.25' },
+    {username:'marina', post: 'hello', time :'11.25' },
+    {username:'marina', post: 'hello', time :'11.25' },
+    
+  ],
+  newPostText: 'wazzup'
+}
 let store = {
   _state: {
     dialogsData: [
@@ -54,3 +63,4 @@ let store = {
 
 
   export default store;
+  

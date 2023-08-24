@@ -4,6 +4,7 @@ import './index.css';
 import store from './redux/state';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { newsState } from './redux/state';
 const consl = () => {
     console.log ('to chto nujno vivesti')
 }
@@ -19,7 +20,8 @@ let rerenderEntireTree = (state) => {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App 
+    
+    <App newsState={newsState}
     dialogsData={store.getState().dialogsData} 
     newUserText={store._state.newUserText} 
     addUser={store.addUser} 

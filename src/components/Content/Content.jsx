@@ -5,7 +5,7 @@ import { Route, Routes , } from "react-router-dom";
 import News from "../News/News";
 import Messenger from "../Messenger/Messenger";
 const Content =(props)=>{
-   
+   debugger
     return (
         
     <div className={s.content}> 
@@ -13,7 +13,7 @@ const Content =(props)=>{
     <Routes>
     <Route path="/myprofile" element={<MyProfile />} />
 
-    <Route path="/news" element ={<News/>} />
+    <Route path="/news" element ={<News newsState={props.newsState}/>} />
     
     <Route path="/messenger/" element = {<Messenger dialogsData={props.dialogsData} 
     addUser={props.addUser}

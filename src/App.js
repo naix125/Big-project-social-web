@@ -6,14 +6,15 @@ import Content from './components/Content/Content';
 import { BrowserRouter } from 'react-router-dom';
 
 const App =(props)=> {
- 
+
   return (
   <BrowserRouter>
+  
   <div className='App'>
   
 <Header/>
 <Navbar/>
-<Content dialogsData={props.dialogsData} addUser={props.addUser} 
+<Content newsState={props.newsState} dialogsData={props.dialogsData} addUser={props.addUser} 
 newUserText={props.newUserText}
 updateNewUser={props.updateNewUser}/>
 
